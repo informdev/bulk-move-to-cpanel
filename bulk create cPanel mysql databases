@@ -1,0 +1,28 @@
+BULK CREATE CPANEL MYSQL DATABASES
+nano bulkmysql.sh
+
+#everything here is case sensitive.
+#set uapi to the following if you're on CloudLinux /usr/local/cpanel/bin/uapi
+#I kept things really simple for myself and made the DB_USERNAME passwords all the same with a really complex password.
+#this comes in three parts but you should be able to stuff it in one file and let it do its thing.
+#we have to use the uapi because we want the databases associated with their respective accounts.
+
+#create the databases
+uapi --user=CPANEL_USERNAME Mysql create_database name=DB_NAME;
+uapi --user=CPANEL_USERNAME Mysql create_database name=DB_NAME;
+uapi --user=CPANEL_USERNAME Mysql create_database name=DB_NAME;
+
+#create the db users
+uapi --user=CPANEL_USERNAME Mysql create_user name=DB_USERNAME password=PICK_A_PASSWORD;
+uapi --user=CPANEL_USERNAME Mysql create_user name=DB_USERNAME password=PICK_A_PASSWORD;
+uapi --user=CPANEL_USERNAME Mysql create_user name=DB_USERNAME password=PICK_A_PASSWORD;
+
+#grant privledges
+uapi --user=CPANEL_USERNAME Mysql set_privileges_on_database user=DB_USERNAME database=DB_NAME privileges=ALL;
+uapi --user=CPANEL_USERNAME Mysql set_privileges_on_database user=DB_USERNAME database=DB_NAME privileges=ALL;
+uapi --user=CPANEL_USERNAME Mysql set_privileges_on_database user=DB_USERNAME database=DB_NAME privileges=ALL;
+
+#save the file.
+#now run the file.
+
+sh bulkmysql.sh
