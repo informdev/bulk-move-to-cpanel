@@ -53,4 +53,3 @@ do
 done
 
 echo -e "\nA log of this operation was saved at /root/execution_results.log"
-END
