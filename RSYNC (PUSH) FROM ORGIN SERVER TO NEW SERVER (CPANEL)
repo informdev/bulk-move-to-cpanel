@@ -1,0 +1,10 @@
+nano rsyncpush.sh
+
+rsync -a /PATH/TO/SITE/FILES/ root@111.111.111.111:/home/CPANEL_USERNAME/public_html;
+rsync -a /PATH/TO/SITE/FILES/ root@111.111.111.111:/home/CPANEL_USERNAME/public_html;
+rsync -a /PATH/TO/SITE/FILES/ root@111.111.111.111:/home/CPANEL_USERNAME/public_html;
+
+#save the file.
+#now run the file.
+
+sh rsyncpush.sh
