@@ -5,3 +5,9 @@ mysql -N -e 'show databases' | while read dbname; do mysqldump --complete-insert
 #or compressed
 
 mysql -N -e 'show databases' | while read dbname; do mysqldump --complete-insert --routines --triggers --single-transaction "$dbname" > "$dbname".sql; [[ $? -eq 0 ]] && gzip "$dbname".sql; done
+
+#now if you want to take the time to rename all the SQL files to match the new databases you'll be importing to you can try
+
+for sql in *.sql; do dbname=${sql/\.sql/}; echo -n "Now importing $dbname ... "; mysql $dbname < $sql; echo " done."; done 
+
+#But I didn't use this method.
