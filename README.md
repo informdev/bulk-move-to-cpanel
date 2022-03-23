@@ -12,9 +12,9 @@ touch cpanel_mass_account.sh; chmod +x cpanel_mass_account.sh; tee -a cpanel_mas
 
 You also need to create a file named something like list.txt and set your perimeters for each account:
 
-TheDomain.com DESIRED_USERNAME DESIRED_PASSWORD
-TheDomain.com DESIRED_USERNAME DESIRED_PASSWORD
-TheDomain.com DESIRED_USERNAME DESIRED_PASSWORD
+TheDomain.com DESIRED_USERNAME DESIRED_PASSWORD<br />
+TheDomain.com DESIRED_USERNAME DESIRED_PASSWORD<br />
+TheDomain.com DESIRED_USERNAME DESIRED_PASSWORD<br />
 
 etc... Alternatively, you can just input the domain and the script will automatically create usernames and passwords for each one.
 
