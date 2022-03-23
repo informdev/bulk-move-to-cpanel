@@ -8,9 +8,7 @@ nano cpanel_mass_account.sh then input the script inside the above file.
 
 Then run the following:
 
-touch cpanel_mass_account.sh
-chmod +x cpanel_mass_account.sh
-tee -a cpanel_mass_account.sh
+touch cpanel_mass_account.sh; chmod +x cpanel_mass_account.sh; tee -a cpanel_mass_account.sh
 
 You also need to create a file named something like list.txt and set your perimeters for each account:
 
