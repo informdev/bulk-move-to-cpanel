@@ -1,0 +1,13 @@
+#for my use at least you can't have a space between -p and the DB password.
+#just for the record THIS IS FOR THE ORIGIN SERVER.
+
+nano bulkdbimport.sh
+
+mysql -u DB_USERNAME -pDB_PASSWORD DB_NAME < DB_EXPORT.sql;
+mysql -u DB_USERNAME -pDB_PASSWORD DB_NAME < DB_EXPORT.sql;
+mysql -u DB_USERNAME -pDB_PASSWORD DB_NAME < DB_EXPORT.sql;
+
+#save the file.
+#now run the file.
+
+sh bulkdbimport.sh
